@@ -5,6 +5,13 @@ class AddNoteModalSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(12),
+          topRight: Radius.circular(12),
+        ),
+      ),
+    );
   }
 }
