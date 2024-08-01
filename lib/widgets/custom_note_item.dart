@@ -29,7 +29,7 @@ class CustomNoteItem extends StatelessWidget {
               subtitle: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Text(
-                  'Our new Google expertfsdhfgdsjhfgsdjhfgsdjhfdf sdfhsdgfsdfsdf sfdd i new in egyir khd',
+                  'Our new Google expertfsdhfgdsjhfgsdjhfgsdjhfdf',
                   style: TextStyle(
                       color: Colors.black.withOpacity(.5), fontSize: 20),
                 ),
