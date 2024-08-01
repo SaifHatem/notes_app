@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class CustomSearchIcon extends StatelessWidget {
-  CustomSearchIcon({
+class CustomIcon extends StatelessWidget {
+  CustomIcon({
     super.key,
     this.onTappp,
+    required this.icon,
   });
 
   VoidCallback? onTappp;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,8 @@ class CustomSearchIcon extends StatelessWidget {
       ),
       child: IconButton(
         onPressed: onTappp,
-        icon: const Icon(
-          Icons.search,
+        icon: Icon(
+          icon,
           size: 28,
         ),
       ),
