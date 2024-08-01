@@ -7,50 +7,53 @@ class CustomNoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: const Color(0xffFFcc80),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          ListTile(
-            contentPadding: const EdgeInsets.all(0),
-            title: const Text(
-              'Seif Hatem',
-              style: TextStyle(color: Colors.black, fontSize: 26),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: Container(
+        padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: const Color(0xffFFcc80),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ListTile(
+              contentPadding: const EdgeInsets.all(0),
+              title: const Text(
+                'Seif Hatem',
+                style: TextStyle(color: Colors.black, fontSize: 26),
+              ),
+              subtitle: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Text(
+                  'Our new Google expertfsdhfgdsjhfgsdjhfgsdjhfdf sdfhsdgfsdfsdf sfdd i new in egyir khd',
+                  style: TextStyle(
+                      color: Colors.black.withOpacity(.5), fontSize: 20),
+                ),
+              ),
+              trailing: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.delete,
+                    color: Colors.black,
+                    size: 30,
+                  )),
             ),
-            subtitle: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
+            Padding(
+              padding: const EdgeInsets.only(right: 16.0, top: 12),
               child: Text(
-                'Our new Google expertfsdhfgdsjhfgsdjhfgsdjhfdf sdfhsdgfsdfsdf sfdd i new in egyir khd',
+                'Mai 21, 2020',
                 style: TextStyle(
-                    color: Colors.black.withOpacity(.5), fontSize: 20),
+                  color: Colors.black.withOpacity(.5),
+                  fontSize: 14,
+                ),
               ),
             ),
-            trailing: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.delete,
-                  color: Colors.black,
-                  size: 30,
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0, top: 12),
-            child: Text(
-              'Mai 21, 2020',
-              style: TextStyle(
-                color: Colors.black.withOpacity(.5),
-                fontSize: 14,
-              ),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
