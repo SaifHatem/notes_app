@@ -21,15 +21,6 @@ class CustomNoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, EditNoteView.id);
-              },
-              icon: const Icon(
-                Icons.edit,
-                color: Colors.black,
-              ),
-            ),
             ListTile(
               contentPadding: const EdgeInsets.all(0),
               title: const Text(
@@ -60,6 +51,15 @@ class CustomNoteItem extends StatelessWidget {
                   color: Colors.black.withOpacity(.5),
                   fontSize: 14,
                 ),
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, EditNoteView.id);
+              },
+              icon: const Icon(
+                Icons.edit,
+                color: Colors.black,
               ),
             ),
           ],

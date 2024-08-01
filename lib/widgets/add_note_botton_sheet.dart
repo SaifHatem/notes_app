@@ -41,7 +41,9 @@ class AddNoteModalSheet extends StatelessWidget {
               SizedBox(
                 height: 50,
               ),
-              CustomButton(),
+              CustomButton(
+                text: 'Add note',
+              ),
             ],
           ),
         ),
