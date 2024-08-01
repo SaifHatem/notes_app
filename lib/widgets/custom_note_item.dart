@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/views/edit_note_view.dart';
 
 class CustomNoteItem extends StatelessWidget {
   const CustomNoteItem({
@@ -20,6 +21,15 @@ class CustomNoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
+            IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, EditNoteView.id);
+              },
+              icon: const Icon(
+                Icons.edit,
+                color: Colors.black,
+              ),
+            ),
             ListTile(
               contentPadding: const EdgeInsets.all(0),
               title: const Text(
