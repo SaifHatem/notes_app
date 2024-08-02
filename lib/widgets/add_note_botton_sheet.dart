@@ -12,21 +12,23 @@ class AddNoteModalSheet extends StatelessWidget {
     // Determine the keyboard height using MediaQuery
     final keyboardHeight = MediaQuery.of(context).viewInsets.bottom;
 
-    return Container(
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(12),
-          topRight: Radius.circular(12),
+    return BlocProvider(
+      create: (context) => AddNoteCubit(),
+      child: Container(
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(12),
+            topRight: Radius.circular(12),
+          ),
         ),
-      ),
-      child: Padding(
-        padding: EdgeInsets.only(
-          bottom: keyboardHeight, // Adjust padding based on the keyboard height
-          left: 16,
-          right: 16,
-          top: 20,
-        ),
-        child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(
+            bottom:
+                keyboardHeight, // Adjust padding based on the keyboard height
+            left: 16,
+            right: 16,
+            top: 20,
+          ),
           child: BlocConsumer<AddNoteCubit, AddNoteState>(
             listener: (context, state) {
               if (state is AddNoteSuccess) {
@@ -39,7 +41,7 @@ class AddNoteModalSheet extends StatelessWidget {
             builder: (context, state) {
               return ModalProgressHUD(
                 inAsyncCall: state is AddNoteLoading ? true : false,
-                child: const AddNoteForm(),
+                child: const SingleChildScrollView(child: AddNoteForm()),
               );
             },
           ),
